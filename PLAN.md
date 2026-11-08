@@ -142,6 +142,7 @@ installation is included in this pilot. Models and caches remain outside Git.
 
 Plan revised on 2026-11-08. The MLX API and Pi baseline are installed and verified.
 OpenCode 2.2.6 is installed temporarily in this project and passes the streamed
-read/edit/read fixture. Resume, compaction and permission checks remain underway.
+read/edit/read fixture. Private-server restart/resume and manual compaction also passed. Permission
+checks remain underway.
 Pi remains the previously verified comparison.
 Login startup and private network access remain deferred until client acceptance.

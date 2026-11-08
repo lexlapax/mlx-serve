@@ -6,8 +6,8 @@ project-local Pi client. See [PLAN.md](PLAN.md) and [RESULTS.md](RESULTS.md).
 
 ## Client direction
 
-OpenCode 2.2.6 now passes the local read/edit/read fixture; session and permission
-checks remain in progress. See [PLAN.md](PLAN.md). Its project-local installation
+OpenCode 2.2.6 now passes the local read/edit/read fixture; restart/resume and manual
+compaction also passed; permission checks remain in progress. See [PLAN.md](PLAN.md). Its project-local installation
 is temporary: the requested permanent installation belongs in a shared dotsetup
 recipe for all machines, as a globally available CLI. The MLX server is independent
 of the coding client. Pi remains the tested fallback below.

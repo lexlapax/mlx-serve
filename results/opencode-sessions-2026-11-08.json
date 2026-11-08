@@ -1,0 +1,20 @@
+{
+  "remember": {
+    "seconds": 42.832,
+    "text": "cobalt-8426"
+  },
+  "resume": {
+    "seconds": 42.751,
+    "text": "cobalt-8426"
+  },
+  "compaction": {
+    "completed": true
+  },
+  "after_compaction": {
+    "seconds": 39.578,
+    "text": "cobalt-8426"
+  },
+  "version": "2.2.6",
+  "test_compaction_keep_tokens": 256,
+  "configured_compaction_keep_tokens": 4096
+}
