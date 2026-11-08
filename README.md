@@ -8,8 +8,9 @@ temporary project-local OpenCode and Pi clients. See [PLAN.md](PLAN.md),
 ## Client direction
 
 OpenCode 2.2.6 now passes the local read/edit/read fixture; restart/resume and manual
-compaction and edit/shell permission decisions also passed. See [PLAN.md](PLAN.md). Its project-local installation
-is temporary: the requested permanent installation belongs in a shared dotsetup
+compaction and edit/shell permission decisions also passed. The installed Mac CLI
+now also passes a separate coding fixture using its normal user configuration.
+See [PLAN.md](PLAN.md). Its project-local installation is temporary: the requested permanent installation belongs in a shared dotsetup
 recipe for all machines, as a globally available CLI. The MLX server is independent
 of the coding client. Pi remains the tested fallback below.
 
@@ -32,27 +33,40 @@ cd ~/projects/lexlapax/mlx-serve
 uv run --frozen python serve.py
 ```
 
-Open another terminal for the temporary OpenCode client:
+On the configured Mac Studio, open another terminal for the installed client:
 
 ```sh
 cd ~/projects/lexlapax/mlx-serve
+opencode
+```
+
+Dotsetup owns this globally available installation and the Mac-only seed for
+`~/.config/opencode/opencode.json`. It selects `macstudio/macstudio-local`.
+The global CLI does not start the MLX backend. New machines need their own
+installation and provider setup; this command is verified on the configured Mac.
+
+For the isolated diagnostic client, use:
+
+```sh
 uv run --frozen python opencode_client.py
 ```
 
-For another repository, run this launcher from that repository's directory:
+For another repository, run `opencode` from its directory. To use the isolated
+diagnostic launcher instead:
 
 ```sh
 cd ~/projects/lexlapax/your-project
 ~/projects/lexlapax/mlx-serve/.venv/bin/python ~/projects/lexlapax/mlx-serve/opencode_client.py
 ```
 
-The pilot uses private configuration/session directories under
+The diagnostic launcher uses private configuration/session directories under
 `.runtime/opencode/` and a standalone client server. Read/search operations are
 allowed; edits and shell commands ask permission. Other tools are disabled.
 Project configuration, plugins and MCP are disabled for this compatibility test;
 review repository instructions yourself before approving tool actions. These
 permissions are application controls, not an OS sandbox. Global installation
-through a shared dotsetup recipe for all machines is now authorized and underway.
+through a shared dotsetup recipe is installed on Mac Studio. The same recipe
+covers other hosts; provider settings remain host-specific.
 
 For the Pi fallback:
 

@@ -58,3 +58,24 @@ the everyday client. Pi remains available as a verified fallback.
 
 Raw events, runtime databases and model weights are ignored. Public Git contains
 only source, dependency pins and synthetic aggregate results.
+
+## Installed Mac client follow-up
+
+Dotsetup now seeds a missing Mac user configuration for the installed CLI,
+preserving any existing JSON/JSONC settings. The installed server selected the
+local agent/model without model or config overrides and passed a separate
+slugify task: read/read/edit/read, one approved edit, and six independent Python
+assertions. Total time was 80.331 seconds. The test used the permission API;
+noninteractive `opencode run` automatically rejects ask permissions. Interactive
+UI approval and everyday usability still require operator acceptance.
+
+The disposable runner must set PWD to match its subprocess cwd; normal shell cd
+already does this. An initial runner mismatch selected dotsetup instead of the
+fixture and was stopped without approving edits. Those attempts are not counted
+as successful coding checks. Raw synthetic sessions remain outside Git.
+
+An ordinary installed CLI request from a fresh empty directory returned exactly
+MLX READY in 17.395 seconds, with no tool calls or model/server overrides. A prior
+request in the coding fixture attempted an unrequested edit before replying;
+noninteractive permissions denied it and no file changed. Keep edit/shell approval
+controls and assess model behavior during interactive use.
