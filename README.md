@@ -4,6 +4,13 @@ A native Python service for local chat and coding agents on the M1 Ultra Mac
 Studio. The pilot uses vllm-mlx and Qwen3.8-27B at 4-bit quantization, with a
 project-local Pi client. See [PLAN.md](PLAN.md) and [RESULTS.md](RESULTS.md).
 
+## Client direction
+
+OpenCode is now the preferred next client trial. See [PLAN.md](PLAN.md) for the
+version-specific setup and acceptance steps. It has not yet been installed or
+verified by this project. The commands below continue to describe the tested
+Pi baseline; the MLX server is independent of the coding client.
+
 ## Start and use
 
 The current pilot listens on `http://127.0.0.1:8008/v1` with model ID
