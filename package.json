@@ -1,0 +1,12 @@
+{
+  "name": "macstudio-mlx-client",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pinned Pi client for the local MLX pilot",
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.0"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

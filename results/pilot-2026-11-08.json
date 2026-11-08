@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-08",
+  "host": "macstudio",
+  "hardware": "Apple M1 Ultra, 48 GPU cores, 64 GiB RAM",
+  "macos": "26.7.3 (25G416)",
+  "versions": {
+    "vllm-mlx": "0.6.0",
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.3",
+    "mlx-vlm": "0.7.12",
+    "transformers": "5.22.2",
+    "python": "3.12.9",
+    "pi": "1.5.0",
+    "node": "26.13.0"
+  },
+  "model": {
+    "repo_id": "mlx-community/Qwen3.8-27B-4bit",
+    "revision": "10c35caafbb80f7dc6a7a432cdd11af10a6d4818",
+    "served_name": "macstudio-local",
+    "tool_parser": "qwen3_xml",
+    "context_window": 16384,
+    "max_output_tokens": 2048
+  },
+  "api": [
+    {
+      "test": "cold_chat",
+      "seconds": 2.712,
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 3,
+        "total_tokens": 31
+      },
+      "message": {
+        "role": "assistant",
+        "content": "42"
+      }
+    },
+    {
+      "test": "warm_chat",
+      "seconds": 0.443,
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 3,
+        "total_tokens": 31
+      },
+      "message": {
+        "role": "assistant",
+        "content": "42"
+      }
+    },
+    {
+      "test": "stream",
+      "ttft_seconds": 0.349,
+      "seconds": 3.214,
+      "usage": {
+        "prompt_tokens": 25,
+        "completion_tokens": 84,
+        "total_tokens": 109
+      },
+      "text": "A Python virtual environment creates an isolated directory with its own copy of the Python interpreter and installed packages, preventing conflicts between different projects that require specific library versions. This isolation ensures that dependencies for one project do not interfere with or break another, maintaining stability and reproducibility across development and deployment environments. Additionally, it simplifies dependency management by allowing developers to easily create, share, and recreate consistent environments using a requirements file."
+    },
+    {
+      "test": "tool_call",
+      "seconds": 2.585,
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 16,
+        "total_tokens": 297
+      },
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_2da74d423982468fb5e3fcb6",
+            "type": "function",
+            "function": {
+              "name": "read_pilot_marker",
+              "arguments": "{}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "test": "tool_result",
+      "seconds": 2.358,
+      "usage": {
+        "prompt_tokens": 321,
+        "completion_tokens": 8,
+        "total_tokens": 329
+      },
+      "message": {
+        "role": "assistant",
+        "content": "violet-7391"
+      }
+    },
+    {
+      "test": "after_cancel",
+      "seconds": 0.89,
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 3,
+        "total_tokens": 31
+      },
+      "message": {
+        "role": "assistant",
+        "content": "42"
+      }
+    },
+    {
+      "test": "long_prompt",
+      "seconds": 56.326,
+      "usage": {
+        "prompt_tokens": 9023,
+        "completion_tokens": 2,
+        "total_tokens": 9025
+      },
+      "message": {
+        "role": "assistant",
+        "content": "amber"
+      }
+    }
+  ],
+  "pi": {
+    "test": "pi_read_edit",
+    "seconds": 28.013,
+    "tools": [
+      "read",
+      "edit",
+      "read"
+    ],
+    "tool_results": 3,
+    "exact_edit": true,
+    "python_assertions": 3,
+    "client": "1.5.0"
+  },
+  "memory_sampling": {
+    "samples": 120,
+    "sample_interval_seconds": 1,
+    "peak_rss_gib": 15.634,
+    "minimum_available_gib": 21.371,
+    "maximum_swap_gib": 0.0
+  },
+  "metal_memory_bytes": {
+    "active": 16059999999.999998,
+    "peak": 18160000000.0,
+    "cache": 260000000.0
+  }
+}

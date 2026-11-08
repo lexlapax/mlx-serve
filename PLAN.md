@@ -74,5 +74,6 @@ installation is included in this pilot. Models and caches remain outside Git.
 
 ## Status
 
-Plan prepared. Installation, model download and local acceptance pending.
-Assistant owns implementation and verification next.
+Pilot installed and verified on 2026-11-08. API and Pi acceptance passed;
+see RESULTS.md for versions, measurements and untested behavior. Operator tries
+the local client next. Login startup and private network access remain deferred.
