@@ -6,10 +6,11 @@ project-local Pi client. See [PLAN.md](PLAN.md) and [RESULTS.md](RESULTS.md).
 
 ## Client direction
 
-OpenCode is now the preferred next client trial. See [PLAN.md](PLAN.md) for the
-version-specific setup and acceptance steps. It has not yet been installed or
-verified by this project. The commands below continue to describe the tested
-Pi baseline; the MLX server is independent of the coding client.
+OpenCode 2.2.6 now passes the local read/edit/read fixture; session and permission
+checks remain in progress. See [PLAN.md](PLAN.md). Its project-local installation
+is temporary: the requested permanent installation belongs in a shared dotsetup
+recipe for all machines, as a globally available CLI. The MLX server is independent
+of the coding client. Pi remains the tested fallback below.
 
 ## Start and use
 
@@ -68,6 +69,7 @@ nvm Node does not meet Pi's requirement. No global npm package is installed.
 cd ~/projects/lexlapax/mlx-serve
 uv sync --frozen --python 3.12
 PATH=/opt/homebrew/bin:$PATH npm ci --ignore-scripts --no-audit --no-fund
+/opt/homebrew/bin/node node_modules/@opencode/cli/postinstall.mjs
 uv run --frozen python download.py
 uv run --frozen python serve.py --dry-run
 ```
@@ -113,4 +115,5 @@ separately. Its event log and result remain under `.runtime/`.
 - Approve login startup/private network deployment only after trying the pilot.
   Host deployment belongs in dotsetup; preserve Herdr's existing Tailscale route.
 
-No Git remote has been configured and nothing has been pushed.
+Source: https://github.com/lexlapax/mlx-serve (public). Runtime state, credentials,
+models and test session logs are excluded from Git.

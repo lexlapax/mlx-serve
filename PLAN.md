@@ -78,7 +78,8 @@ This evidence remains valid for Pi; it is not evidence of OpenCode acceptance.
 
 No client installation or live migration is performed by this plan revision.
 The next implementation phase belongs to the assistant. The operator's later
-interactive acceptance decides the everyday client. No push is authorized.
+interactive acceptance decides the everyday client. The user has now authorized
+committing and pushing progress to the public github.com/lexlapax/mlx-serve repo.
 
 ## Why evaluate OpenCode first
 
@@ -93,6 +94,17 @@ Current official docs use V2 `providers`, `package`, `settings` and ordered
 `permissions` rules. V1 examples use `provider`, `npm`, `options`, `permission`
 and different action names. Context7 returns examples from both generations;
 use official version-matched docs and the installed schema to resolve conflicts.
+
+## Installation ownership and rollout
+
+The user clarified that OpenCode must eventually be a globally available CLI
+like Codex or Claude, managed by a shared dotsetup recipe for every machine.
+This project-local package is only a temporary compatibility fixture. Shared
+installation and common client settings belong in dotsetup, with platform
+package mappings and host enrollment. They must not depend on an mlx-serve
+checkout or on macstudio being the client's host. Mac Studio owns only the MLX
+backend. Tailnet access to that backend is a separate deployment step.
+Global installation is explicitly later; this trial does not deploy it.
 
 ## Deferred deployment
 
@@ -129,6 +141,7 @@ installation is included in this pilot. Models and caches remain outside Git.
 ## Status
 
 Plan revised on 2026-11-08. The MLX API and Pi baseline are installed and verified.
-OpenCode is the preferred next client trial and is not yet installed or tested
-by this project. This plan-only revision changes no runtime configuration.
+OpenCode 2.2.6 is installed temporarily in this project and passes the streamed
+read/edit/read fixture. Resume, compaction and permission checks remain underway.
+Pi remains the previously verified comparison.
 Login startup and private network access remain deferred until client acceptance.

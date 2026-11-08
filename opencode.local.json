@@ -1,0 +1,118 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "macstudio/macstudio-local",
+  "default_agent": "local",
+  "providers": {
+    "macstudio": {
+      "name": "Mac Studio MLX",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8008/v1",
+        "apiKey": "local-no-auth"
+      },
+      "models": {
+        "macstudio-local": {
+          "name": "Mac Studio local MLX",
+          "modelID": "macstudio-local",
+          "capabilities": {
+            "tools": true,
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 16384,
+            "output": 2048
+          }
+        }
+      }
+    }
+  },
+  "compaction": {
+    "auto": true,
+    "keep": {
+      "tokens": 4096
+    },
+    "buffer": 4096
+  },
+  "agents": {
+    "local": {
+      "mode": "primary",
+      "model": "macstudio/macstudio-local",
+      "system": "You are a coding assistant. Read relevant files before editing. Use tools to make requested changes and verify the result. Follow the user instructions and permission decisions. If an action is denied, report the denial and stop; do not retry or work around it.",
+      "request": {
+        "body": {
+          "temperature": 0,
+          "max_tokens": 2048,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      },
+      "steps": 8
+    },
+    "title": {
+      "model": "macstudio/macstudio-local",
+      "request": {
+        "body": {
+          "temperature": 0,
+          "max_tokens": 2048,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      }
+    },
+    "summary": {
+      "model": "macstudio/macstudio-local",
+      "request": {
+        "body": {
+          "temperature": 0,
+          "max_tokens": 2048,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      }
+    },
+    "compaction": {
+      "model": "macstudio/macstudio-local",
+      "request": {
+        "body": {
+          "temperature": 0,
+          "max_tokens": 2048,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      }
+    }
+  },
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "ask"
+    },
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "deny"
+    }
+  ],
+  "mcp": {},
+  "plugins": [],
+  "experimental": {
+    "background_compaction": false
+  },
+  "update": "disable",
+  "snapshot": false
+}
