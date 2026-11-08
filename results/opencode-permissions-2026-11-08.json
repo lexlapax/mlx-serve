@@ -1,0 +1,30 @@
+{
+  "version": "2.2.6",
+  "tests": [
+    {
+      "test": "reject_edit",
+      "action": "edit",
+      "decision": "reject",
+      "waited_for_approval": true,
+      "outcome_verified": true,
+      "tool_outcome": "error"
+    },
+    {
+      "test": "approve_edit",
+      "action": "edit",
+      "decision": "once",
+      "waited_for_approval": true,
+      "outcome_verified": true,
+      "tool_outcome": "completed"
+    },
+    {
+      "test": "approve_shell",
+      "action": "shell",
+      "decision": "once",
+      "waited_for_approval": true,
+      "outcome_verified": true,
+      "tool_outcome": "completed"
+    }
+  ],
+  "limitation": "After rejecting an edit, session idle metadata remained unset; tool reported declined and file stayed unchanged."
+}

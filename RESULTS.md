@@ -8,7 +8,8 @@ results succeeded. Three independent Python assertions passed. The fixture test
 is a compatibility check, not an assessment of broad coding ability.
 
 The plan was committed as d15d109 before installation. This record accompanies
-the implementation commit. The repository is local-only, with no remote.
+the implementation commit. The repository was initially local-only and was subsequently published at
+https://github.com/lexlapax/mlx-serve with explicit user approval.
 
 ## Runtime
 
@@ -89,7 +90,8 @@ not establish full-context or concurrent-request memory limits.
 
 Operator: try Pi using README.md in a disposable or suitable project. After
 acceptance, assistant can prepare login startup and private Tailscale deployment
-in dotsetup. Push requires approval and a remote destination for mlx-serve.
+in dotsetup. The user subsequently authorized checkpoint pushes to the public mlx-serve
+repository. OpenCode trial results are recorded separately.
 
 Machine-readable evidence: [pilot-2026-11-08.json](results/pilot-2026-11-08.json).
 Only synthetic test content is committed. Session/event logs remain ignored.

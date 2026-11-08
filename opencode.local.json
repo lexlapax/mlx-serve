@@ -95,7 +95,7 @@
     {
       "action": "*",
       "resource": "*",
-      "effect": "ask"
+      "effect": "deny"
     },
     {
       "action": "read",
@@ -103,9 +103,29 @@
       "effect": "allow"
     },
     {
-      "action": "subagent",
+      "action": "glob",
       "resource": "*",
-      "effect": "deny"
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": "*",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "*",
+      "effect": "ask"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "ask"
     }
   ],
   "mcp": {},

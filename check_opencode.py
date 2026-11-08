@@ -1,5 +1,7 @@
 """Check an isolated OpenCode read/edit cycle against the local model."""
 import json
+import os
+import signal
 from pathlib import Path
 import subprocess
 import sys
@@ -22,12 +24,18 @@ env = environment(runtime, config)
 command = [str(BINARY), 'run', '--standalone', '--format', 'json', '--title', 'MLX fixture acceptance',
            'Read calculator.py, then use the edit tool to fix add(a, b) so it adds the two arguments. Preserve every other byte, including the trailing newline. Read it back to verify the change. Do not create any other files.']
 start = time.monotonic()
+process = subprocess.Popen(command, cwd=fixture, env=env, text=True,
+                           stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                           start_new_session=True)
 try:
-    result = subprocess.run(command, cwd=fixture, env=env, text=True, capture_output=True, timeout=180)
-except subprocess.TimeoutExpired as exc:
-    (ROOT / '.runtime/opencode-timeout.stdout').write_bytes(exc.stdout or b'')
-    (ROOT / '.runtime/opencode-timeout.stderr').write_bytes(exc.stderr or b'')
+    stdout, stderr = process.communicate(timeout=180)
+except subprocess.TimeoutExpired:
+    os.killpg(process.pid, signal.SIGTERM)
+    stdout, stderr = process.communicate(timeout=15)
+    (ROOT / '.runtime/opencode-timeout.stdout').write_text(stdout)
+    (ROOT / '.runtime/opencode-timeout.stderr').write_text(stderr)
     raise
+result = subprocess.CompletedProcess(command, process.returncode, stdout, stderr)
 (ROOT / '.runtime/opencode-acceptance.jsonl').write_text(result.stdout)
 (ROOT / '.runtime/opencode-acceptance.stderr').write_text(result.stderr)
 assert result.returncode == 0, result.stderr[-3000:]

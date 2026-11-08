@@ -104,7 +104,8 @@ installation and common client settings belong in dotsetup, with platform
 package mappings and host enrollment. They must not depend on an mlx-serve
 checkout or on macstudio being the client's host. Mac Studio owns only the MLX
 backend. Tailnet access to that backend is a separate deployment step.
-Global installation is explicitly later; this trial does not deploy it.
+The user subsequently resumed shared installation on all machines. Dotsetup now
+owns that rollout; this project retains only the isolated compatibility client.
 
 ## Deferred deployment
 
@@ -143,6 +144,8 @@ installation is included in this pilot. Models and caches remain outside Git.
 Plan revised on 2026-11-08. The MLX API and Pi baseline are installed and verified.
 OpenCode 2.2.6 is installed temporarily in this project and passes the streamed
 read/edit/read fixture. Private-server restart/resume and manual compaction also passed. Permission
-checks remain underway.
+checks passed for rejecting edits, approving edits, and approving a harmless
+shell command. The API session busy flag remained set after a rejected edit;
+permission results were verified from terminal tool states and fixture bytes.
 Pi remains the previously verified comparison.
 Login startup and private network access remain deferred until client acceptance.
