@@ -2,6 +2,8 @@
 
 ## 2026-11-08
 
+- serving: verify rollback to the existing endpoint after the successful Rust pilot.
+
 - serving: build pinned rMLX and verify hybrid-context reuse, tools, cancellation and queued requests.
 
 - benchmark: compare isolated Pi/OpenCode requests and prepare sequential Rust MLX probes.

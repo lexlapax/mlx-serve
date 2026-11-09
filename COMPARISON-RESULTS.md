@@ -186,5 +186,8 @@ The Rust overlap succeeded. Python syntax and Git whitespace checks passed.
 No full upstream Rust suite, long-duration stress test, broad coding-quality
 benchmark or operator interactive UI acceptance was performed.
 
-The default endpoint selection is pending operator choice after the successful
-pilot. No automatic startup or private-network route was added.
+Rollback is verified: the Rust pilot was stopped, Python was restored on
+127.0.0.1:8008, model discovery passed and a chat request returned exactly 42.
+Port 8009 has no listener. The active-backend selection remains pending operator
+choice; no migration is inferred from the pilot approval. No automatic startup
+or private-network route was added.
