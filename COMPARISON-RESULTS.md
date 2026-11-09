@@ -191,3 +191,14 @@ Rollback is verified: the Rust pilot was stopped, Python was restored on
 Port 8009 has no listener. The active-backend selection remains pending operator
 choice; no migration is inferred from the pilot approval. No automatic startup
 or private-network route was added.
+
+
+## Subsequent deployment
+
+The user selected Pi+rMLX after this comparison. Dotsetup deployed rMLX as the
+Mac login service on port 8008, a separate private Tailscale route for fleet
+clients, and globally available Pi with rMLX as the new-session default.
+The real installed Pi configuration passed read/edit/read and three assertions
+in 16.548 seconds. Python rollback remains installed but stopped. The manually
+selected OpenAI subscription backup uses Pi's OAuth-only provider; it requires
+operator authentication, and no cloud response is claimed here.

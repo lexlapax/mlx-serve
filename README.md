@@ -1,12 +1,12 @@
 # MLX serving on Mac Studio
 
-A native Python service for local chat and coding agents on the M1 Ultra Mac
-Studio. The pilot uses vllm-mlx and Qwen3.8-27B at 4-bit quantization, with a
-temporary project-local OpenCode and Pi clients. See [PLAN.md](PLAN.md),
-[RESULTS.md](RESULTS.md) and [OpenCode results](OPENCODE-RESULTS.md).
-
-See [controlled client/server measurements](COMPARISON-RESULTS.md) for the
-approved independent Pi and Rust backend comparison.
+A local MLX model service on the M1 Ultra Mac Studio. The active backend is
+rMLX 0.4.5 with Qwen3.8-27B at 4-bit quantization. Pi is installed globally
+through the shared dotsetup recipe; OpenCode remains available. The original
+Python vllm-mlx environment is retained for rollback and comparisons.
+See [PLAN.md](PLAN.md), [initial results](RESULTS.md),
+[OpenCode results](OPENCODE-RESULTS.md) and
+[controlled client/server measurements](COMPARISON-RESULTS.md).
 
 ## Client direction
 
@@ -19,38 +19,46 @@ framework option, not a terminal replacement installed by this pilot.
 
 The globally installed OpenCode remains managed by the shared dotsetup recipe.
 The project-local Pi and OpenCode copies are diagnostic clients. Existing client
-settings are preserved; backend activation is a separate operational choice.
+settings are preserved. The user selected and deployed rMLX after the comparison.
 
 ## Start and use
 
-The current pilot listens on `http://127.0.0.1:8008/v1` with model ID
-`macstudio-local`. It is local-only and has no API authentication. No login job
-or Tailscale route is installed. Only one generation runs at a time.
+On the deployed Mac, rMLX starts at login under `dotsetup.rmlx` and listens on
+`http://127.0.0.1:8008/v1`, model `macstudio-local`. It queues requests and runs
+one generation at a time. Dotsetup manages the private Tailscale route used by
+other machines; the model process itself remains bound to loopback.
 
-From a Mac Studio terminal, check whether it is already running:
+Open a terminal in a project and run:
 
 ```sh
+pi
+```
+
+New Pi sessions default to rMLX. OpenAI subscription access is a manually selected
+backup, using `openai-codex/gpt-6.1-sol`; it never switches automatically. Sign in
+inside Pi with `/login openai-codex`, then use `/model` or Ctrl+P to switch after
+login. This OAuth-only provider cannot use an inherited OpenAI API key. Subscription
+login and a real cloud response require operator verification on each machine.
+
+Check the Mac service with:
+
+```sh
+launchctl print gui/$(id -u)/dotsetup.rmlx
 curl --fail http://127.0.0.1:8008/v1/models
 ```
 
-If it is not running, start it in a terminal and leave that terminal open:
+Do not start a second model process alongside the managed service. If the service
+is intentionally stopped, the equivalent foreground command is:
 
 ```sh
 cd ~/projects/lexlapax/mlx-serve
-uv run --frozen python serve.py
+uv run --frozen python serve_rmlx.py --port 8008
 ```
 
-On the configured Mac Studio, open another terminal for the installed client:
-
-```sh
-cd ~/projects/lexlapax/mlx-serve
-opencode
-```
-
-Dotsetup owns this globally available installation and the Mac-only seed for
-`~/.config/opencode/opencode.json`. It selects `macstudio/macstudio-local`.
-The global CLI does not start the MLX backend. New machines need their own
-installation and provider setup; this command is verified on the configured Mac.
+OpenCode still uses the same endpoint and remains usable with `opencode`.
+[Dotsetup's Pi runbook](https://github.com/lexlapax/dotsetup/blob/main/docs/runbooks/pi-rmlx.md)
+owns the shared install, host provider configuration, login service and private
+network route. The project-local clients below remain isolated diagnostics.
 
 For the isolated diagnostic client, use:
 
@@ -75,7 +83,7 @@ permissions are application controls, not an OS sandbox. Global installation
 through a shared dotsetup recipe is installed on Mac Studio. The same recipe
 covers other hosts; provider settings remain host-specific.
 
-For the Pi fallback:
+For the project-local Pi diagnostic launcher:
 
 ```sh
 cd ~/projects/lexlapax/mlx-serve
@@ -97,11 +105,10 @@ configuration is isolated from the existing Assistant. Pi's file/shell tools
 execute on the client machine; the model server does not execute them. Use the
 client on a suitable working tree; its tools are not an OS sandbox.
 
-For a server you started in a terminal, use Control-C in that terminal. For the
-pilot left running by the setup session, use `lsof -nP -iTCP:8008 -sTCP:LISTEN`
-to find its PID. Inspect `ps -p PID -o command=` and confirm it is this project's
-`serve.py` process before running `kill -TERM PID`. Substitute the observed PID;
-never reuse a historical PID without checking it.
+Stop a foreground server with Control-C in its terminal. Stop the managed Mac
+service with `launchctl bootout gui/$(id -u)/dotsetup.rmlx`. To run the Python
+rollback after stopping Rust, use `uv run --frozen python serve.py`. Stop that
+manual Python process before reapplying the Mac host hook to resume managed Rust.
 
 ## Reproduce installation
 

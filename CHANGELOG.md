@@ -2,6 +2,8 @@
 
 ## 2026-11-08
 
+- serving: record selected managed rMLX deployment and globally installed Pi defaults.
+
 - serving: verify rollback to the existing endpoint after the successful Rust pilot.
 
 - serving: build pinned rMLX and verify hybrid-context reuse, tools, cancellation and queued requests.

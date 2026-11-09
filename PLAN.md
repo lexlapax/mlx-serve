@@ -171,3 +171,18 @@ out of this terminal pilot. The gain is verified hybrid-context reuse, with cold
 prefill unchanged and raw decode slightly slower. Candidate activation on the
 existing endpoint is pending the operator's separate choice; login startup and
 Tailscale exposure remain deferred.
+
+
+## Deployment selected
+
+The user approved Pi+rMLX deployment and a shared Pi CLI recipe like OpenCode.
+Mac rMLX is now the managed login service on the existing localhost:8008 endpoint;
+Python remains a stopped rollback alternative. Pi's standard CLI completed the
+read/edit/read fixture with three assertions in 16.548 seconds, selecting the
+configured model without command-line model or provider overrides.
+
+Dotsetup owns fleet installation, a private model endpoint, and seeded defaults.
+The user explicitly chose a selectable OpenAI subscription backup. The configured
+provider is OAuth-only openai-codex, so existing API-key readiness cannot become
+paid API fallback. Account login is not assumed and no tokens are transferred.
+Windows remains deferred. See dotsetup's Pi rollout for current per-host status.

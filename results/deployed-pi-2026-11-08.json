@@ -1,0 +1,17 @@
+{
+  "host": "macstudio",
+  "client": "Pi 1.5.0",
+  "backend": "rMLX 0.4.5",
+  "default_provider": "macstudio",
+  "default_model": "macstudio-local",
+  "model_override": false,
+  "tools": [
+    "read",
+    "edit",
+    "read"
+  ],
+  "exact_edit": true,
+  "python_assertions": 3,
+  "seconds": 16.548,
+  "subscription_login_verified": false
+}
