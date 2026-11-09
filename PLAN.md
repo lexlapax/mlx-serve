@@ -149,3 +149,14 @@ shell command. The API session busy flag remained set after a rejected edit;
 permission results were verified from terminal tool states and fixture bytes.
 Pi remains the previously verified comparison.
 Login startup and private network access remain deferred until client acceptance.
+
+
+## Performance follow-up: separate client and backend choices
+
+The operator reported slow interactive OpenCode use and asked about Pi/Pi Durable
+and a Rust MLX server as independent alternatives. See
+[the researched comparison](CLIENT-SERVER-OPTIONS.md). Recommendation: compare Pi
+on the existing server and rMLX with the existing model independently; Pi Durable
+is a potential custom persistent-assistant framework, not the immediate client
+migration. No alternative server installation or default switch is authorized by
+this assessment. Existing working clients/server remain available.
