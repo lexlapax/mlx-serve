@@ -1,0 +1,319 @@
+{
+  "server": "rmlx-reload",
+  "settings": {
+    "temperature": 0,
+    "max_tokens": 1024,
+    "thinking": false,
+    "normalization": "loopback proxy enforces identical sampling and output cap",
+    "reload_rmlx_model_before_each_task": true,
+    "caveat": "Qwen architecture prefix cache survives model unload/load; this is not a cold-process comparison."
+  },
+  "runs": [
+    {
+      "client": "pi",
+      "repeat": 1,
+      "seconds": 13.954,
+      "passed": true,
+      "tools": [
+        "read",
+        "edit",
+        "read"
+      ],
+      "exact_edit": true,
+      "python_assertions": 3,
+      "requests": [
+        {
+          "seconds": 6.152,
+          "first_content_seconds": 6.114,
+          "usage": {
+            "prompt_tokens": 819,
+            "completion_tokens": 25,
+            "total_tokens": 844
+          }
+        },
+        {
+          "seconds": 2.854,
+          "first_content_seconds": 2.816,
+          "usage": {
+            "prompt_tokens": 873,
+            "completion_tokens": 62,
+            "total_tokens": 935
+          }
+        },
+        {
+          "seconds": 1.647,
+          "first_content_seconds": 1.608,
+          "usage": {
+            "prompt_tokens": 963,
+            "completion_tokens": 25,
+            "total_tokens": 988
+          }
+        },
+        {
+          "seconds": 2.992,
+          "first_content_seconds": 0.54,
+          "usage": {
+            "prompt_tokens": 1017,
+            "completion_tokens": 67,
+            "total_tokens": 1084
+          }
+        }
+      ]
+    },
+    {
+      "client": "opencode",
+      "repeat": 1,
+      "seconds": 18.745,
+      "passed": true,
+      "tools": [
+        "read",
+        "edit",
+        "read"
+      ],
+      "exact_edit": true,
+      "python_assertions": 3,
+      "requests": [
+        {
+          "seconds": 10.444,
+          "first_content_seconds": 10.407,
+          "usage": {
+            "prompt_tokens": 1530,
+            "completion_tokens": 25,
+            "total_tokens": 1555
+          }
+        },
+        {
+          "seconds": 2.852,
+          "first_content_seconds": 2.815,
+          "usage": {
+            "prompt_tokens": 1599,
+            "completion_tokens": 59,
+            "total_tokens": 1658
+          }
+        },
+        {
+          "seconds": 1.634,
+          "first_content_seconds": 1.596,
+          "usage": {
+            "prompt_tokens": 1682,
+            "completion_tokens": 25,
+            "total_tokens": 1707
+          }
+        },
+        {
+          "seconds": 3.163,
+          "first_content_seconds": 0.707,
+          "usage": {
+            "prompt_tokens": 1751,
+            "completion_tokens": 67,
+            "total_tokens": 1818
+          }
+        }
+      ]
+    },
+    {
+      "client": "opencode",
+      "repeat": 2,
+      "seconds": 10.725,
+      "passed": true,
+      "tools": [
+        "read",
+        "edit",
+        "read"
+      ],
+      "exact_edit": true,
+      "python_assertions": 3,
+      "requests": [
+        {
+          "seconds": 2.594,
+          "first_content_seconds": 2.557,
+          "usage": {
+            "prompt_tokens": 1530,
+            "completion_tokens": 25,
+            "total_tokens": 1555
+          }
+        },
+        {
+          "seconds": 2.854,
+          "first_content_seconds": 2.817,
+          "usage": {
+            "prompt_tokens": 1599,
+            "completion_tokens": 59,
+            "total_tokens": 1658
+          }
+        },
+        {
+          "seconds": 1.635,
+          "first_content_seconds": 1.597,
+          "usage": {
+            "prompt_tokens": 1682,
+            "completion_tokens": 25,
+            "total_tokens": 1707
+          }
+        },
+        {
+          "seconds": 3.172,
+          "first_content_seconds": 0.713,
+          "usage": {
+            "prompt_tokens": 1751,
+            "completion_tokens": 67,
+            "total_tokens": 1818
+          }
+        }
+      ]
+    },
+    {
+      "client": "pi",
+      "repeat": 2,
+      "seconds": 13.95,
+      "passed": true,
+      "tools": [
+        "read",
+        "edit",
+        "read"
+      ],
+      "exact_edit": true,
+      "python_assertions": 3,
+      "requests": [
+        {
+          "seconds": 6.125,
+          "first_content_seconds": 6.085,
+          "usage": {
+            "prompt_tokens": 819,
+            "completion_tokens": 25,
+            "total_tokens": 844
+          }
+        },
+        {
+          "seconds": 2.863,
+          "first_content_seconds": 2.82,
+          "usage": {
+            "prompt_tokens": 873,
+            "completion_tokens": 62,
+            "total_tokens": 935
+          }
+        },
+        {
+          "seconds": 1.654,
+          "first_content_seconds": 1.615,
+          "usage": {
+            "prompt_tokens": 963,
+            "completion_tokens": 25,
+            "total_tokens": 988
+          }
+        },
+        {
+          "seconds": 3.003,
+          "first_content_seconds": 0.549,
+          "usage": {
+            "prompt_tokens": 1017,
+            "completion_tokens": 67,
+            "total_tokens": 1084
+          }
+        }
+      ]
+    },
+    {
+      "client": "pi",
+      "repeat": 3,
+      "seconds": 13.702,
+      "passed": true,
+      "tools": [
+        "read",
+        "edit",
+        "read"
+      ],
+      "exact_edit": true,
+      "python_assertions": 3,
+      "requests": [
+        {
+          "seconds": 6.106,
+          "first_content_seconds": 6.067,
+          "usage": {
+            "prompt_tokens": 819,
+            "completion_tokens": 25,
+            "total_tokens": 844
+          }
+        },
+        {
+          "seconds": 2.855,
+          "first_content_seconds": 2.816,
+          "usage": {
+            "prompt_tokens": 873,
+            "completion_tokens": 62,
+            "total_tokens": 935
+          }
+        },
+        {
+          "seconds": 1.66,
+          "first_content_seconds": 1.621,
+          "usage": {
+            "prompt_tokens": 963,
+            "completion_tokens": 25,
+            "total_tokens": 988
+          }
+        },
+        {
+          "seconds": 2.779,
+          "first_content_seconds": 0.545,
+          "usage": {
+            "prompt_tokens": 1017,
+            "completion_tokens": 61,
+            "total_tokens": 1078
+          }
+        }
+      ]
+    },
+    {
+      "client": "opencode",
+      "repeat": 3,
+      "seconds": 18.442,
+      "passed": true,
+      "tools": [
+        "read",
+        "edit",
+        "read"
+      ],
+      "exact_edit": true,
+      "python_assertions": 3,
+      "requests": [
+        {
+          "seconds": 10.285,
+          "first_content_seconds": 10.247,
+          "usage": {
+            "prompt_tokens": 1530,
+            "completion_tokens": 25,
+            "total_tokens": 1555
+          }
+        },
+        {
+          "seconds": 2.839,
+          "first_content_seconds": 2.802,
+          "usage": {
+            "prompt_tokens": 1599,
+            "completion_tokens": 59,
+            "total_tokens": 1658
+          }
+        },
+        {
+          "seconds": 1.638,
+          "first_content_seconds": 1.599,
+          "usage": {
+            "prompt_tokens": 1682,
+            "completion_tokens": 25,
+            "total_tokens": 1707
+          }
+        },
+        {
+          "seconds": 3.17,
+          "first_content_seconds": 0.708,
+          "usage": {
+            "prompt_tokens": 1751,
+            "completion_tokens": 67,
+            "total_tokens": 1818
+          }
+        }
+      ]
+    }
+  ]
+}

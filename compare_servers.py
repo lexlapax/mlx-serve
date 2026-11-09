@@ -29,7 +29,8 @@ def request(messages, **extra):
 def cache():
     try:
         with urllib.request.urlopen(args.base_url+'/metrics/cache', timeout=5) as response:
-            return json.load(response)
+            data = json.load(response)
+            return {key: data[key] for key in ('models', 'tokens_in', 'tokens_out', 'error_counts') if key in data}
     except (urllib.error.URLError, ValueError):
         return None
 
@@ -46,6 +47,8 @@ def chat(label, messages, cancel=False, **extra):
     try:
         with request(messages, **extra) as response:
             for line in response:
+                if time.monotonic() - start > 240:
+                    raise TimeoutError('Request exceeded the 240-second wall-clock limit')
                 if not line.startswith(b'data: '):
                     continue
                 raw = line[6:].strip()

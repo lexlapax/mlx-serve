@@ -1,0 +1,7 @@
+{
+  "samples": 600,
+  "peak_rss_gib": 15.595,
+  "swap_observations": [
+    "total = 0.00M  used = 0.00M  free = 0.00M  (encrypted)"
+  ]
+}

@@ -1,0 +1,1490 @@
+{
+  "server": "rmlx",
+  "runs": [
+    {
+      "test": "short_1",
+      "seconds": 5.319,
+      "first_content_seconds": 0.72,
+      "estimated_decode_tokens_per_second": 27.62,
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "text": "Hash tables are fundamental data structures that map keys to values using a hash function, which converts the key into an index within an array. Ideally, each key would map to a unique index, allowing for constant-time average performance in operations like insertion, deletion, and lookup. However, because the number of possible keys is often infinite while the array size is finite, it is mathematically inevitable that two distinct keys will produce the same hash index. This phenomenon is known as a collision. To maintain the integrity and efficiency of the data structure, hash tables employ specific strategies to manage these conflicts, primarily categorized into open addressing and separate chaining.\n\n",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 1,
+            "evictions": 0,
+            "bytes": 155779072,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 155975680,
+            "metal_peak_alloc_bytes": 15774026056,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 28,
+        "tokens_out": 3,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 2,
+            "evictions": 0,
+            "bytes": 311296000,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 163840000,
+            "metal_peak_alloc_bytes": 15953693000,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 52,
+        "tokens_out": 131,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      }
+    },
+    {
+      "test": "short_2",
+      "seconds": 4.925,
+      "first_content_seconds": 0.341,
+      "estimated_decode_tokens_per_second": 27.71,
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "text": "Hash tables are fundamental data structures that map keys to values using a hash function, which converts the key into an index within an array. Ideally, each key would map to a unique index, allowing for constant-time average performance in operations like insertion, deletion, and lookup. However, because the number of possible keys is often infinite while the array size is finite, it is mathematically inevitable that two distinct keys will produce the same hash index. This phenomenon is known as a collision. To maintain the integrity and efficiency of the data structure, hash tables employ specific strategies to manage these conflicts, primarily categorized into open addressing and separate chaining.\n\n",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 2,
+            "evictions": 0,
+            "bytes": 311296000,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 163840000,
+            "metal_peak_alloc_bytes": 15953693000,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 52,
+        "tokens_out": 131,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 3,
+            "evictions": 0,
+            "bytes": 466812928,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 163840000,
+            "metal_peak_alloc_bytes": 16132917576,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 76,
+        "tokens_out": 259,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      }
+    },
+    {
+      "test": "short_3",
+      "seconds": 4.932,
+      "first_content_seconds": 0.344,
+      "estimated_decode_tokens_per_second": 27.69,
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "text": "Hash tables are fundamental data structures that map keys to values using a hash function, which converts the key into an index within an array. Ideally, each key would map to a unique index, allowing for constant-time average performance in operations like insertion, deletion, and lookup. However, because the number of possible keys is often infinite while the array size is finite, it is mathematically inevitable that two distinct keys will produce the same hash index. This phenomenon is known as a collision. To maintain the integrity and efficiency of the data structure, hash tables employ specific strategies to manage these conflicts, primarily categorized into open addressing and separate chaining.\n\n",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 3,
+            "evictions": 0,
+            "bytes": 466812928,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 163840000,
+            "metal_peak_alloc_bytes": 16132917576,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 76,
+        "tokens_out": 259,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 4,
+            "evictions": 0,
+            "bytes": 622329856,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 163840000,
+            "metal_peak_alloc_bytes": 16312224008,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 100,
+        "tokens_out": 387,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      }
+    },
+    {
+      "test": "5k_cold",
+      "seconds": 30.813,
+      "first_content_seconds": 30.492,
+      "estimated_decode_tokens_per_second": 21.2,
+      "usage": {
+        "prompt_tokens": 4877,
+        "completion_tokens": 7,
+        "total_tokens": 4884
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 4,
+            "evictions": 0,
+            "bytes": 622329856,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 163840000,
+            "metal_peak_alloc_bytes": 16312224008,
+            "block_hits": 0,
+            "block_misses": 0,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 100,
+        "tokens_out": 387,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 5,
+            "evictions": 1,
+            "bytes": 1094057984,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 474021888,
+            "metal_peak_alloc_bytes": 17784347014,
+            "block_hits": 0,
+            "block_misses": 19,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 4977,
+        "tokens_out": 394,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "5k_repeat",
+      "seconds": 0.265,
+      "first_content_seconds": 0.006,
+      "estimated_decode_tokens_per_second": 27.21,
+      "usage": {
+        "prompt_tokens": 4877,
+        "completion_tokens": 7,
+        "total_tokens": 4884
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 0,
+            "misses": 5,
+            "evictions": 1,
+            "bytes": 1094057984,
+            "hit_rate": 0.0,
+            "kv_cache_bytes": 474021888,
+            "metal_peak_alloc_bytes": 17784347014,
+            "block_hits": 0,
+            "block_misses": 19,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 4977,
+        "tokens_out": 394,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 1,
+            "misses": 5,
+            "evictions": 1,
+            "bytes": 1094057984,
+            "hit_rate": 0.16666666666666666,
+            "kv_cache_bytes": 474021888,
+            "metal_peak_alloc_bytes": 17784347014,
+            "block_hits": 19,
+            "block_misses": 19,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 9854,
+        "tokens_out": 401,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "5k_append",
+      "seconds": 0.82,
+      "first_content_seconds": 0.634,
+      "estimated_decode_tokens_per_second": 27.17,
+      "usage": {
+        "prompt_tokens": 4912,
+        "completion_tokens": 5,
+        "total_tokens": 4917
+      },
+      "text": "8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 1,
+            "misses": 5,
+            "evictions": 1,
+            "bytes": 1094057984,
+            "hit_rate": 0.16666666666666666,
+            "kv_cache_bytes": 474021888,
+            "metal_peak_alloc_bytes": 17784347014,
+            "block_hits": 19,
+            "block_misses": 19,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 9854,
+        "tokens_out": 401,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 2,
+            "misses": 5,
+            "evictions": 2,
+            "bytes": 1568342016,
+            "hit_rate": 0.2857142857142857,
+            "kv_cache_bytes": 476184576,
+            "metal_peak_alloc_bytes": 17839372552,
+            "block_hits": 38,
+            "block_misses": 19,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 14766,
+        "tokens_out": 406,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "9k_cold",
+      "seconds": 56.05,
+      "first_content_seconds": 55.782,
+      "estimated_decode_tokens_per_second": 26.39,
+      "usage": {
+        "prompt_tokens": 8947,
+        "completion_tokens": 7,
+        "total_tokens": 8954
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 2,
+            "misses": 5,
+            "evictions": 2,
+            "bytes": 1568342016,
+            "hit_rate": 0.2857142857142857,
+            "kv_cache_bytes": 476184576,
+            "metal_peak_alloc_bytes": 17839372552,
+            "block_hits": 38,
+            "block_misses": 19,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 14766,
+        "tokens_out": 406,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 2,
+            "misses": 6,
+            "evictions": 5,
+            "bytes": 1524039680,
+            "hit_rate": 0.25,
+            "kv_cache_bytes": 740753408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 38,
+            "block_misses": 53,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 23713,
+        "tokens_out": 413,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "9k_repeat",
+      "seconds": 0.284,
+      "first_content_seconds": 0.018,
+      "estimated_decode_tokens_per_second": 26.4,
+      "usage": {
+        "prompt_tokens": 8947,
+        "completion_tokens": 7,
+        "total_tokens": 8954
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 2,
+            "misses": 6,
+            "evictions": 5,
+            "bytes": 1524039680,
+            "hit_rate": 0.25,
+            "kv_cache_bytes": 740753408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 38,
+            "block_misses": 53,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 23713,
+        "tokens_out": 413,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 3,
+            "misses": 6,
+            "evictions": 5,
+            "bytes": 1524039680,
+            "hit_rate": 0.3333333333333333,
+            "kv_cache_bytes": 740753408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 72,
+            "block_misses": 53,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 32660,
+        "tokens_out": 420,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "9k_append",
+      "seconds": 0.973,
+      "first_content_seconds": 0.776,
+      "estimated_decode_tokens_per_second": 25.35,
+      "usage": {
+        "prompt_tokens": 8982,
+        "completion_tokens": 5,
+        "total_tokens": 8987
+      },
+      "text": "8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 3,
+            "misses": 6,
+            "evictions": 5,
+            "bytes": 1524039680,
+            "hit_rate": 0.3333333333333333,
+            "kv_cache_bytes": 740753408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 72,
+            "block_misses": 53,
+            "partial_hits": 0,
+            "partial_hit_rate": 0.0,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 32660,
+        "tokens_out": 420,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 4,
+            "misses": 6,
+            "evictions": 6,
+            "bytes": 1790771200,
+            "hit_rate": 0.4,
+            "kv_cache_bytes": 742916096,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 106,
+            "block_misses": 54,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.25,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 41642,
+        "tokens_out": 425,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "tool_call",
+      "seconds": 2.457,
+      "first_content_seconds": 2.42,
+      "estimated_decode_tokens_per_second": null,
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 16,
+        "total_tokens": 297
+      },
+      "text": "",
+      "tool_calls": [
+        {
+          "id": "call_53d4aa368cbf44308113d1091023137f",
+          "type": "function",
+          "function": {
+            "name": "read_pilot_marker",
+            "arguments": "{}"
+          }
+        }
+      ],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 4,
+            "misses": 6,
+            "evictions": 6,
+            "bytes": 1790771200,
+            "hit_rate": 0.4,
+            "kv_cache_bytes": 742916096,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 106,
+            "block_misses": 54,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.25,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 41642,
+        "tokens_out": 425,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 4,
+            "misses": 7,
+            "evictions": 6,
+            "bytes": 2117074944,
+            "hit_rate": 0.36363636363636365,
+            "kv_cache_bytes": 173408256,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 106,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.25,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 41923,
+        "tokens_out": 441,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "tool_result",
+      "seconds": 0.821,
+      "first_content_seconds": 0.531,
+      "estimated_decode_tokens_per_second": 27.74,
+      "usage": {
+        "prompt_tokens": 321,
+        "completion_tokens": 8,
+        "total_tokens": 329
+      },
+      "text": "violet-7391",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 4,
+            "misses": 7,
+            "evictions": 6,
+            "bytes": 2117074944,
+            "hit_rate": 0.36363636363636365,
+            "kv_cache_bytes": 173408256,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 106,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.25,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 41923,
+        "tokens_out": 441,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 7,
+            "evictions": 7,
+            "bytes": 1551761408,
+            "hit_rate": 0.4166666666666667,
+            "kv_cache_bytes": 175505408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42244,
+        "tokens_out": 449,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "cancel",
+      "seconds": 0.344,
+      "first_content_seconds": 0.344,
+      "estimated_decode_tokens_per_second": null,
+      "usage": null,
+      "text": "1",
+      "tool_calls": [],
+      "stream_done": false,
+      "cancelled_by_test": true,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 7,
+            "evictions": 7,
+            "bytes": 1551761408,
+            "hit_rate": 0.4166666666666667,
+            "kv_cache_bytes": 175505408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42244,
+        "tokens_out": 449,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 8,
+            "evictions": 7,
+            "bytes": 1707212800,
+            "hit_rate": 0.38461538461538464,
+            "kv_cache_bytes": 175505408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42244,
+        "tokens_out": 449,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      }
+    },
+    {
+      "test": "after_cancel",
+      "seconds": 0.479,
+      "first_content_seconds": 0.374,
+      "estimated_decode_tokens_per_second": 29.7,
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 3,
+        "total_tokens": 31
+      },
+      "text": "42",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 8,
+            "evictions": 7,
+            "bytes": 1707212800,
+            "hit_rate": 0.38461538461538464,
+            "kv_cache_bytes": 175505408,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42244,
+        "tokens_out": 449,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 9,
+            "evictions": 8,
+            "bytes": 966459392,
+            "hit_rate": 0.35714285714285715,
+            "kv_cache_bytes": 155975680,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42272,
+        "tokens_out": 452,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    },
+    {
+      "test": "overlap_first",
+      "seconds": 4.93,
+      "first_content_seconds": 0.335,
+      "estimated_decode_tokens_per_second": 27.65,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 128,
+        "total_tokens": 149
+      },
+      "text": "# Binary Search: A Detailed Explanation\n\n## Core Idea\n\nBinary search is an **efficient algorithm** for finding a target value within a **sorted array**. It works by repeatedly dividing the search interval in half, which gives it a time complexity of **O(log n)** \u2014 vastly superior to linear search's O(n).\n\n---\n\n## Prerequisites\n\n1. The array must be **sorted** (in ascending or descending order).\n2. You must know the **target value** you're searching for.\n\n---\n\n## Step-by-Step Process\n\nGiven a sorted array `arr` and a target `target`:\n\n1",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 9,
+            "evictions": 8,
+            "bytes": 966459392,
+            "hit_rate": 0.35714285714285715,
+            "kv_cache_bytes": 155975680,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42272,
+        "tokens_out": 452,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 11,
+            "evictions": 9,
+            "bytes": 795475968,
+            "hit_rate": 0.3125,
+            "kv_cache_bytes": 163643392,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42293,
+        "tokens_out": 580,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      }
+    },
+    {
+      "test": "overlap_second",
+      "seconds": 5.146,
+      "first_content_seconds": 5.042,
+      "estimated_decode_tokens_per_second": 29.71,
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 3,
+        "total_tokens": 31
+      },
+      "text": "42",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 10,
+            "evictions": 8,
+            "bytes": 966459392,
+            "hit_rate": 0.3333333333333333,
+            "kv_cache_bytes": 155975680,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42272,
+        "tokens_out": 452,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "cache_after": {
+        "models": [
+          {
+            "model_id": "macstudio-local",
+            "hits": 5,
+            "misses": 11,
+            "evictions": 10,
+            "bytes": 622329856,
+            "hit_rate": 0.3125,
+            "kv_cache_bytes": 155975680,
+            "metal_peak_alloc_bytes": 19738743564,
+            "block_hits": 107,
+            "block_misses": 55,
+            "partial_hits": 1,
+            "partial_hit_rate": 0.2,
+            "ssd_hits": 0,
+            "load_phases": {
+              "mmap_ms": 2,
+              "dequant_ms": 15871,
+              "gpu_residency_ms": 0,
+              "first_kernel_ready_ms": 0,
+              "total_load_ms": 16133
+            }
+          }
+        ],
+        "tokens_in": 42321,
+        "tokens_out": 583,
+        "error_counts": {
+          "bad_request": 0,
+          "context_overflow": 0,
+          "not_found": 0,
+          "oom_load": 0,
+          "oom_kv_cache": 0,
+          "oom_mid_stream": 0,
+          "timeout": 0,
+          "upstream": 0,
+          "internal": 0,
+          "rate_limit": 0,
+          "admission_sla_503": 0
+        }
+      },
+      "correct": true
+    }
+  ]
+}

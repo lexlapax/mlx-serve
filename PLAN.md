@@ -160,3 +160,14 @@ on the existing server and rMLX with the existing model independently; Pi Durabl
 is a potential custom persistent-assistant framework, not the immediate client
 migration. No alternative server installation or default switch is authorized by
 this assessment. Existing working clients/server remain available.
+
+
+## 2026-11-08 independent comparison outcome
+
+The approved client/server pilot is complete; see COMPARISON-RESULTS.md.
+Recommend rMLX for repeated-context serving and Pi for the next interactive trial.
+OpenCode remains installed and works against the Rust candidate. Pi Durable stays
+out of this terminal pilot. The gain is verified hybrid-context reuse, with cold
+prefill unchanged and raw decode slightly slower. Candidate activation on the
+existing endpoint is pending the operator's separate choice; login startup and
+Tailscale exposure remain deferred.

@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--base-url', default='http://127.0.0.1:8008')
     parser.add_argument('--label', default='vllm-mlx')
     parser.add_argument('--runs', type=int, default=3)
+    parser.add_argument('--reload-rmlx-model', action='store_true', help='Unload/load before each task; excludes load time but does not clear all architecture caches')
     args = parser.parse_args()
     runtime = ROOT / '.runtime' / f'comparison-{args.label}-{time.time_ns()}'
     runtime.mkdir(parents=True)
@@ -72,7 +73,7 @@ def main():
     threading.Thread(target=proxy.serve_forever, daemon=True).start()
     base = f'http://127.0.0.1:{proxy.server_port}/v1'
     results = {'server': args.label, 'settings': {'temperature': 0, 'max_tokens': 1024,
-        'thinking': False, 'normalization': 'loopback proxy enforces identical sampling and output cap'}, 'runs': []}
+        'thinking': False, 'reload_rmlx_model_before_each_task': args.reload_rmlx_model, 'normalization': 'loopback proxy enforces identical sampling and output cap'}, 'runs': []}
     for repeat in range(args.runs):
         for client in (['pi', 'opencode'] if repeat % 2 == 0 else ['opencode', 'pi']):
             directory = runtime / f'{repeat+1}-{client}'
@@ -105,6 +106,12 @@ def main():
                 env = environment(directory / 'client', config)
                 env['PWD'] = str(fixture)
                 command = [str(BINARY), 'run', '--standalone', '--format', 'json', '--title', 'Local comparison', PROMPT]
+            if args.reload_rmlx_model:
+                for action in ('unload', 'load'):
+                    req = urllib.request.Request(args.base_url + '/v1/models/macstudio-local/' + action,
+                        data=b'{}', headers={'Content-Type': 'application/json'})
+                    with urllib.request.urlopen(req, timeout=120) as response:
+                        json.load(response)
             first = len(requests)
             start = time.monotonic()
             process = subprocess.Popen(command, cwd=fixture, env=env, text=True,

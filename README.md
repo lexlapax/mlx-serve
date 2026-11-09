@@ -10,12 +10,16 @@ approved independent Pi and Rust backend comparison.
 
 ## Client direction
 
-OpenCode 2.2.6 now passes the local read/edit/read fixture; restart/resume and manual
-compaction and edit/shell permission decisions also passed. The installed Mac CLI
-now also passes a separate coding fixture using its normal user configuration.
-See [PLAN.md](PLAN.md). Its project-local installation is temporary: the requested permanent installation belongs in a shared dotsetup
-recipe for all machines, as a globally available CLI. The MLX server is independent
-of the coding client. Pi remains the tested fallback below.
+The controlled comparison supports trying Pi with rMLX for lower latency, while
+keeping OpenCode available. Pi was faster on the same Python backend; rMLX then
+removed most repeated-context processing for both clients. Rust did not improve
+raw decode speed. See [measured results](COMPARISON-RESULTS.md) for sample sizes,
+correctness checks and limitations. Pi Durable remains a separate custom-app
+framework option, not a terminal replacement installed by this pilot.
+
+The globally installed OpenCode remains managed by the shared dotsetup recipe.
+The project-local Pi and OpenCode copies are diagnostic clients. Existing client
+settings are preserved; backend activation is a separate operational choice.
 
 ## Start and use
 
@@ -163,3 +167,23 @@ after its fixture check. Raw logs and sessions remain under `.runtime/`.
 
 Source: https://github.com/lexlapax/mlx-serve (public). Runtime state, credentials,
 models and test session logs are excluded from Git.
+
+
+## Explicit Rust pilot
+
+`serve_rmlx.py` checks the reviewed source/model revisions and uses private state.
+Its default port is **8009**; `--port 8008` selects the existing client endpoint
+only when promoting this backend. Never run both model servers together for this
+64 GiB pilot. See [build and rollback](COMPARISON-RESULTS.md).
+
+With the isolated Rust server already running on 8009:
+
+```sh
+cd ~/projects/lexlapax/mlx-serve
+uv run --frozen python pi.py --backend rmlx
+```
+
+This uses a separate `.runtime/pi-agent-rmlx/` configuration/session directory.
+Without `--backend rmlx`, Pi uses the current server on 8008 and its existing
+private state. The benchmark's automatic fixture edit permissions are not added
+to the interactive launcher.

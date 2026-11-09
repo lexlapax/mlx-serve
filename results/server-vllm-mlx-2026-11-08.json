@@ -1,0 +1,291 @@
+{
+  "server": "vllm-mlx",
+  "runs": [
+    {
+      "test": "short_1",
+      "seconds": 5.209,
+      "first_content_seconds": 0.809,
+      "estimated_decode_tokens_per_second": 28.91,
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "text": "Hash tables are fundamental data structures that map keys to values using a hash function, which converts the key into an index within an array. Ideally, each key would map to a unique index, allowing for constant-time average performance in operations like insertion, deletion, and lookup. However, because the number of possible keys is often infinite while the array size is finite, it is mathematically inevitable that two distinct keys will produce the same hash index. This phenomenon is known as a collision. To maintain the integrity and efficiency of the data structure, hash tables employ specific strategies to manage these conflicts, primarily categorized into open addressing and separate chaining.\n\n",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null
+    },
+    {
+      "test": "short_2",
+      "seconds": 4.762,
+      "first_content_seconds": 0.368,
+      "estimated_decode_tokens_per_second": 28.94,
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "text": "Hash tables are fundamental data structures that map keys to values using a hash function, which converts the key into an index within an array. Ideally, each key would map to a unique index, allowing for constant-time average performance in operations like insertion, deletion, and lookup. However, because the number of possible keys is often infinite while the array size is finite, it is mathematically inevitable that two distinct keys will produce the same hash index. This phenomenon is known as a collision. To maintain the integrity and efficiency of the data structure, hash tables employ specific strategies to manage these conflicts, primarily categorized into open addressing and separate chaining.\n\n",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null
+    },
+    {
+      "test": "short_3",
+      "seconds": 4.76,
+      "first_content_seconds": 0.367,
+      "estimated_decode_tokens_per_second": 28.96,
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "text": "Hash tables are fundamental data structures that map keys to values using a hash function, which converts the key into an index within an array. Ideally, each key would map to a unique index, allowing for constant-time average performance in operations like insertion, deletion, and lookup. However, because the number of possible keys is often infinite while the array size is finite, it is mathematically inevitable that two distinct keys will produce the same hash index. This phenomenon is known as a collision. To maintain the integrity and efficiency of the data structure, hash tables employ specific strategies to manage these conflicts, primarily categorized into open addressing and separate chaining.\n\n",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null
+    },
+    {
+      "test": "5k_cold",
+      "seconds": 30.431,
+      "first_content_seconds": 30.207,
+      "estimated_decode_tokens_per_second": 32.42,
+      "usage": {
+        "prompt_tokens": 4877,
+        "completion_tokens": 7,
+        "total_tokens": 4884
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "5k_repeat",
+      "seconds": 30.398,
+      "first_content_seconds": 30.178,
+      "estimated_decode_tokens_per_second": 33.13,
+      "usage": {
+        "prompt_tokens": 4877,
+        "completion_tokens": 7,
+        "total_tokens": 4884
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "5k_append",
+      "seconds": 30.496,
+      "first_content_seconds": 30.346,
+      "estimated_decode_tokens_per_second": 36.23,
+      "usage": {
+        "prompt_tokens": 4912,
+        "completion_tokens": 5,
+        "total_tokens": 4917
+      },
+      "text": "8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "9k_cold",
+      "seconds": 56.817,
+      "first_content_seconds": 56.517,
+      "estimated_decode_tokens_per_second": 24.65,
+      "usage": {
+        "prompt_tokens": 8947,
+        "completion_tokens": 7,
+        "total_tokens": 8954
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "9k_repeat",
+      "seconds": 131.894,
+      "first_content_seconds": 131.658,
+      "estimated_decode_tokens_per_second": 30.97,
+      "usage": {
+        "prompt_tokens": 8947,
+        "completion_tokens": 7,
+        "total_tokens": 8954
+      },
+      "text": "amber-8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "9k_append",
+      "seconds": 56.334,
+      "first_content_seconds": 56.175,
+      "estimated_decode_tokens_per_second": 34.14,
+      "usage": {
+        "prompt_tokens": 8982,
+        "completion_tokens": 5,
+        "total_tokens": 8987
+      },
+      "text": "8426",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "tool_call",
+      "seconds": 2.423,
+      "first_content_seconds": 2.176,
+      "estimated_decode_tokens_per_second": 72.11,
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 16,
+        "total_tokens": 297
+      },
+      "text": "",
+      "tool_calls": [
+        {
+          "id": "call_0d8a8e2220ef496cad8dc6d3",
+          "type": "function",
+          "function": {
+            "name": "read_pilot_marker",
+            "arguments": "{}"
+          }
+        }
+      ],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "tool_result",
+      "seconds": 2.293,
+      "first_content_seconds": 2.044,
+      "estimated_decode_tokens_per_second": 33.18,
+      "usage": {
+        "prompt_tokens": 321,
+        "completion_tokens": 8,
+        "total_tokens": 329
+      },
+      "text": "violet-7391",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "cancel",
+      "seconds": 0.376,
+      "first_content_seconds": 0.376,
+      "estimated_decode_tokens_per_second": null,
+      "usage": null,
+      "text": "1",
+      "tool_calls": [],
+      "stream_done": false,
+      "cancelled_by_test": true,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null
+    },
+    {
+      "test": "after_cancel",
+      "seconds": 0.894,
+      "first_content_seconds": 0.822,
+      "estimated_decode_tokens_per_second": 58.07,
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 3,
+        "total_tokens": 31
+      },
+      "text": "42",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null,
+      "correct": true
+    },
+    {
+      "test": "overlap_first",
+      "seconds": 4.76,
+      "first_content_seconds": 0.367,
+      "estimated_decode_tokens_per_second": 28.95,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 128,
+        "total_tokens": 149
+      },
+      "text": "# Binary Search: A Detailed Explanation\n\n## Core Idea\n\nBinary search is an **efficient algorithm** for finding a target value within a **sorted array**. It works by repeatedly dividing the search interval in half, which gives it a time complexity of **O(log n)** \u2014 vastly superior to linear search's O(n).\n\n---\n\n## Prerequisites\n\n1. The array must be **sorted** (in ascending or descending order).\n2. You must know the **target value** you're searching for.\n\n---\n\n## Step-by-Step Process\n\nGiven a sorted array `arr` and a target `target`:\n\n1",
+      "tool_calls": [],
+      "stream_done": true,
+      "cancelled_by_test": false,
+      "error": null,
+      "cache_before": null,
+      "cache_after": null
+    },
+    {
+      "test": "overlap_second",
+      "seconds": 0.008,
+      "first_content_seconds": null,
+      "estimated_decode_tokens_per_second": null,
+      "usage": null,
+      "text": "",
+      "tool_calls": [],
+      "stream_done": false,
+      "cancelled_by_test": false,
+      "error": {
+        "message": "Internal server error",
+        "type": "InternalServerError",
+        "param": null,
+        "code": 500
+      },
+      "cache_before": null,
+      "cache_after": null,
+      "correct": false
+    }
+  ]
+}
