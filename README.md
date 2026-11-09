@@ -5,6 +5,9 @@ Studio. The pilot uses vllm-mlx and Qwen3.8-27B at 4-bit quantization, with a
 temporary project-local OpenCode and Pi clients. See [PLAN.md](PLAN.md),
 [RESULTS.md](RESULTS.md) and [OpenCode results](OPENCODE-RESULTS.md).
 
+See [controlled client/server measurements](COMPARISON-RESULTS.md) for the
+approved independent Pi and Rust backend comparison.
+
 ## Client direction
 
 OpenCode 2.2.6 now passes the local read/edit/read fixture; restart/resume and manual

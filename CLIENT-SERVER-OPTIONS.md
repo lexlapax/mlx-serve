@@ -2,7 +2,8 @@
 
 Research date: 2026-11-08. The user asked whether Pi or Pi Durable could replace
 OpenCode, independently of replacing the Python MLX server with a Rust server.
-This is an assessment and proposed comparison, not approval to install or switch.
+The user approved this bounded comparison with "Go do it". Pilot dependencies
+and temporary server switches are authorized; client defaults remain unchanged.
 
 ## Recommendation
 

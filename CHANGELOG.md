@@ -2,6 +2,8 @@
 
 ## 2026-11-08
 
+- benchmark: compare isolated Pi/OpenCode requests and prepare sequential Rust MLX probes.
+
 - client: verify OpenCode restart/resume and explicit local compaction.
 
 - client: verify the temporary OpenCode 2.2.6 file-edit pilot and record shared rollout ownership.
