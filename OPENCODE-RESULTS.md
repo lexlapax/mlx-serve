@@ -79,3 +79,34 @@ MLX READY in 17.395 seconds, with no tool calls or model/server overrides. A pri
 request in the coding fixture attempted an unrequested edit before replying;
 noninteractive permissions denied it and no file changed. Keep edit/shell approval
 controls and assess model behavior during interactive use.
+
+## Reported slowness and direct throughput
+
+The operator reported slow interactive use and an 8.3 tok/s display. A direct
+HTTP streaming comparison, bypassing OpenCode, measured:
+
+| Input tokens | Output tokens | First content | Total time | Estimated output rate after first content |
+|---:|---:|---:|---:|---:|
+| 24 | 128 | 0.658 s | 5.053 s | 28.94 tok/s |
+| 4878 | 128 | 30.187 s | 34.768 s | 27.76 tok/s |
+
+These are single sequential samples with synthetic prompts, not peak hardware
+benchmarks. Estimated generation rate divides output tokens after the first by
+the interval between first and last content chunks. No model, engine or client
+configuration was changed. Swap use was zero; server RSS was about 15.6 GiB.
+
+Recent OpenCode model steps produced 40 tokens in 15.82 seconds and 474 in 46.04
+seconds. Combined, that is 514 / 61.86 = 8.31 tok/s, matching the reported display.
+Upstream V2 TUI code divides turn output by assistant-step time through the end
+of streaming, including prompt processing, before tool settlement. That is not
+pure token-generation speed. See the [TUI calculation](https://github.com/anomalyco/opencode/blob/dev/packages/tui/src/routes/session/rows.ts).
+
+The active text route logs system-prefix cache skips for non_kv_cache_class,
+so growing context is reprocessed on each tool turn. Overlapping requests also
+produce serialized-route-busy errors and retries. The direct test attributes
+most long-prompt delay to prefill; it does not prove a GPU optimization ceiling.
+The current integration needs responsiveness work before acceptance. Next compare
+cache-compatible serving options and reduce unnecessary overlapping auxiliary
+calls before deciding to change clients or download a smaller model.
+
+[Machine-readable measurements](results/throughput-2026-11-08.json).

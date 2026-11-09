@@ -1,0 +1,31 @@
+{
+  "method": "Direct HTTP SSE; 128-token output cap; synthetic prompts; after-first-content rate is an estimate, not an internal GPU counter",
+  "runs": [
+    {
+      "test": "short",
+      "usage": {
+        "prompt_tokens": 24,
+        "completion_tokens": 128,
+        "total_tokens": 152
+      },
+      "first_content_seconds": 0.658,
+      "total_seconds": 5.053,
+      "overall_output_tokens_per_second": 25.33,
+      "estimated_after_first_content_tokens_per_second": 28.94,
+      "content_chunks": 128
+    },
+    {
+      "test": "long",
+      "usage": {
+        "prompt_tokens": 4878,
+        "completion_tokens": 128,
+        "total_tokens": 5006
+      },
+      "first_content_seconds": 30.187,
+      "total_seconds": 34.768,
+      "overall_output_tokens_per_second": 3.68,
+      "estimated_after_first_content_tokens_per_second": 27.76,
+      "content_chunks": 128
+    }
+  ]
+}
